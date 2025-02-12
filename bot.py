@@ -119,7 +119,7 @@ def generate_answer(prompt: str, language="English") -> str:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ],
-            temperature=1.0,
+            temperature=0.5,
         )
         answer = response.choices[0].message.content.strip()
         if language.lower() in ["spanish", "es", "esp"]:
