@@ -7,6 +7,7 @@ import random
 import datetime
 from functools import lru_cache
 from logging.handlers import RotatingFileHandler
+from flask import Flask
 
 from telegram import Update, ParseMode, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, CallbackContext,
@@ -23,7 +24,7 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 DB_NAME = "hostel.db"
-
+const port = process.env.PORT || 4000;
 # Настройка логирования с ротацией: максимум 10 МБ на файл, 5 резервных копий
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
