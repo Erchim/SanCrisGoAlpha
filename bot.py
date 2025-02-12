@@ -850,4 +850,13 @@ def main():
     updater.idle()
 
 if __name__ == "__main__":
+    PORT = int(os.getenv("PORT", 5000))
+    WEBHOOK_URL = os.getenv("WEBHOOK_URL", "https://your-app-name.onrender.com")
+    full_webhook_url = f"{WEBHOOK_URL}/{TELEGRAM_BOT_TOKEN}"
+    application.bot.set_webhook(url=full_webhook_url)
+    application.run_webhook(
+        listen="0.0.0.0",
+        port=PORT,
+        url_path=TELEGRAM_BOT_TOKEN
+    )
     main()
