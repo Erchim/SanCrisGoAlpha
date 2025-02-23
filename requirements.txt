@@ -1,4 +1,29 @@
-python-telegram-bot==13.15
+# Для работы бота с современными возможностями python-telegram-bot (используется ApplicationBuilder)
+python-telegram-bot>=20.0b0
+
+# Работа с OpenAI API
 openai
+
+# Перевод текста
 deep-translator
+
+# Загрузка переменных окружения
 python-dotenv
+
+# Асинхронное повторное использование event loop
+nest_asyncio
+
+# Работа с часовыми поясами
+pytz
+
+# HTTP-запросы к API (например, Google Places, OpenWeather и др.)
+requests
+
+# Разбор HTML (BeautifulSoup)
+beautifulsoup4
+
+# Определение языка текста
+langdetect
+
+# Геокодирование (Nominatim от geopy)
+geopy
