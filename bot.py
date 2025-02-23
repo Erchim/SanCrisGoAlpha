@@ -417,7 +417,7 @@ async def get_detailed_place_info(place_id: str, lang: str, context: ContextType
         try:
             response = openai.chat.completions.create(
                 model="gpt-4o-mini",
-                temperature=0.3,
+                temperature=0.1,
                 messages=[
                     {"role": "system", "content": "You are a knowledgeable concierge. Provide accurate, engaging, and well-structured descriptions based on the given data."},
                     {"role": "user", "content": prompt}
@@ -766,7 +766,7 @@ def generate_answer(prompt: str, language="English") -> str:
     try:
         response = openai.chat.completions.create(
             model="gpt-4o-mini",
-            temperature=0.3,  # Максимально низкая температура для точности
+            temperature=0.1,  # Максимально низкая температура для точности
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
@@ -919,7 +919,7 @@ def get_cached_translation(context, entity_type, entity_id, field, lang, origina
         try:
             response = openai.chat.completions.create(
                 model="gpt-4o-mini",
-                temperature=0.3,
+                temperature=0.1,
                 messages=[
                     {"role": "system", "content": "You are a translator. Provide accurate and natural translations, preserving proper names and addresses."},
                     {"role": "user", "content": translation_prompt}
