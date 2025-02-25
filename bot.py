@@ -1813,7 +1813,7 @@ async def main():
     app.add_handler(CallbackQueryHandler(button_handler))
     app.add_error_handler(error_handler)
     logger.info("Bot started. Polling for updates...")
-    await app.run_polling(close_loop=False)
+    app.run_polling(close_loop=False)
 
 if __name__ == "__main__":
     try:
